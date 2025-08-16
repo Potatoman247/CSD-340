@@ -1,5 +1,5 @@
 # CSD 340 Web Development with HTML and CSS
 
 ## Contributors
-## +Aidan Jacoby
-## Sue Sampson
+## * Aidan Jacoby
+## * Sue Sampson
