@@ -1,0 +1,33 @@
+container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+h1 {
+    background-color: antiquewhite;
+    border-style: solid;
+    border-color: #D6A800;
+
+}
+h2 {
+    background-color: bisque;
+    border-color: #D6A800;
+}
+h3 {
+    background-color: burlywood;
+    border-color: #D6A800;
+}
+h4 {
+    background-color: blanchedalmond;
+    border-color: #D6A800;
+}
+a {
+    color:cornflowerblue;
+    text-decoration: none;
+}
+a.hover {
+    color:cadetblue;
+}
+a.visited {
+    color: darkslateblue;
+}
