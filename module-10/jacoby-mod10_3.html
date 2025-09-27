@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta title="CSD 340 Web Development with HTML and CSS">
+    <meta name="description" content="module 10.3 assignment">
+    <meta name="creation date" content="9/27/25">
+    <meta name="author" content="aidan jacoby">
+    <meta name="professor" content="sue sampson">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+<script>
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+        
+      }
+    </script>
+
+    <link rel='stylesheet' type='text/css' href='body1.css' />
+
+  </head>
+
+  <body>
+    <br />
+    <div>
+      <a href=#
+         onmouseover="cave.src='arrow.png';"
+         onclick="cave.src='bull.png';"
+         onmouseout="cave.src='zilla.png';"
+      >
+        <img border = 0 name = "cave" src = "zilla.png">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';">
+
+      Run your mouse over the image to change.
+      <br />
+
+    </div>
+      Right-click and select View Source for more details.
+
+    </div>
+
+  </body>
+    </html>
