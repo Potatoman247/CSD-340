@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta title="CSD 340 Web Development with HTML and CSS">
+    <meta name="description" content="module 11.2 assignment">
+    <meta name="creation date" content="10/4/25">
+    <meta name="author" content="aidan jacoby">
+    <meta name="professor" content="sue sampson">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+  </head>
+
+  <body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <p>This is an interactive To Do List. Type in your first item in the text box, then click Add.<br><br> Click the Display button to see current items in the list. Click on Delete Last Entry if you'd like to remove the last entry.</p>
+
+    <input type="text" id="itemInput" placeholder="Input">
+    <button onclick="addArrayElement(); popUp()">Add</button>
+    <button onclick="delArrayElement()">Delete Last Entry</button>
+    <button onclick="displayArray()">Display</button>
+
+    <br>
+
+    <p id="display"></p>
+
+
+  </body>
+
+  <script>
+    
+    var items = [];
+    var itemsCount = 0;
+      function addArrayElement() {
+        const itemInput = document.getElementById("itemInput");
+        const newItem = itemInput.value.trim();
+
+        if (newItem !== '') {
+            items.push(newItem);
+            console.log("Current array:", items);
+            itemsCount += 1;
+            console.log(itemsCount);
+            itemInput.value = ''
+        }
+        else {
+            console.log("Addition Failed, Please Try Again. newItem Value:" + newItem);
+        }
+      }
+      function delArrayElement() {
+        items.pop();
+        console.log("Current array:", items);
+        if (itemsCount > 0){
+            itemsCount -= 1;
+        }
+        console.log(itemsCount);
+      }
+      function displayArray() {
+        document.getElementById("display").innerHTML = '';
+        for (var int ,i = 0; i < items.length; i++) {
+            document.getElementById("display").innerHTML +="Item "+ (i+1) +": " + items[i] + "<br />";
+        }
+      }
+      function popUp() {
+        
+        alertMessage = "Item: " + items[itemsCount - 1] + " Added as Item " + itemsCount;
+        alert(alertMessage);
+      }
+    </script>
+    </html>
